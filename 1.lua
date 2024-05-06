@@ -16,7 +16,7 @@ if not game:IsLoaded() then
 	notLoaded:Destroy()
 end
 
-currentVersion = '0.0'
+currentVersion = '5.9.4'
 
 Holder = Instance.new("Frame")
 Title = Instance.new("TextLabel")
@@ -573,7 +573,7 @@ Credits.Position = UDim2.new(0, 0, 0.9, 30)
 Credits.Size = UDim2.new(0, 250, 0, 20)
 Credits.Font = Enum.Font.SourceSansLight
 Credits.FontSize = Enum.FontSize.Size18
-Credits.Text = "Edge // Zwolf // Moon // Toon"
+Credits.Text = "cozmicisyoursxdd made ts"
 Credits.TextColor3 = Color3.new(1, 1, 1)
 Credits.ZIndex = 10
 
@@ -6819,13 +6819,13 @@ IYMouse.Move:Connect(checkTT)
 
 task.spawn(function()
 	local success, latestVersionInfo = pcall(function() 
-		local versionJson = game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/version')
+		local versionJson = game:HttpGet('https://raw.githubusercontent.com/zackmackburnger/ireallyhateinfyield/main/version')
 		return HttpService:JSONDecode(versionJson)
 	end)
 
 	if success then
 		if currentVersion ~= latestVersionInfo.Version then
-			notify('Outdated','Get the new version at infyiff.github.io')
+			notify('if ts pops up then the nigga pomni broke script')
 		end
 
 		if latestVersionInfo.Announcement and latestVersionInfo.Announcement ~= '' then
