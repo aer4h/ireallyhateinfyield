@@ -3702,7 +3702,7 @@ CMDs = {}
 CMDs[#CMDs + 1] = {NAME = 'fly [speed]', DESC = 'Makes you fly'}
 CMDs[#CMDs + 1] = {NAME = 'unfly', DESC = 'Disables fly'}
 CMDs[#CMDs + 1] = {NAME = 'flyspeed [num]', DESC = 'Set fly speed (default is 20)'}
-CMDs[#CMDs + 1] = {NAME = 'teleport / tp [player] [seconds]', DESC = 'Teleport to an player [TIP: tp (user) 9999999999]'}
+CMDs[#CMDs + 1] = {NAME = 'teleport / tp [player]', DESC = 'Teleport to an player [TIP: tp (user) 9999999999]'}
 wait()
 
 for i = 1, #CMDs do
@@ -7773,13 +7773,13 @@ addcmd('teleport',{'tp'},function(args, speaker)
 	for i,v in pairs(players)do
 		if Players[v].Character ~= nil then
 			local startPos = getRoot(speaker.Character).CFrame
-			local seconds = args[2] or 1
+			local seconds = 0
 			if speaker.Character:FindFirstChildOfClass('Humanoid') and speaker.Character:FindFirstChildOfClass('Humanoid').SeatPart then
 				speaker.Character:FindFirstChildOfClass('Humanoid').Sit = false
-				wait(.1)
+				wait(0)
 			end
 			getRoot(speaker.Character).CFrame = getRoot(Players[v].Character).CFrame + Vector3.new(3,1,0)
-			wait(seconds)
+                                waitseconds()
 			getRoot(speaker.Character).CFrame = startPos
 		end
 	end
